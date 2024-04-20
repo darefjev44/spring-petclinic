@@ -11,9 +11,9 @@ name: JUnit with Maven
 on:
   workflow_run:
     workflows: ["SonarCloud analysis"]
-    types:
-      - completed
-
+    branches: main
+    types: completed
+    
 jobs:
   test:
     runs-on: ubuntu-latest
